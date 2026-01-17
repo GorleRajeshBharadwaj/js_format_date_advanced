@@ -42,8 +42,7 @@ function formatDate(date, fromFormat, toFormat) {
       if (!!dateObject.largeYear) {
         toDateItems.push(dateObject.largeYear);
       } else if (!!dateObject.smallYear) {
-        let year = Number(dateObject.smallYear);
-        year = year < 30 ? '20' + year : '19' + year;
+        const year = Number(dateObject.smallYear) < 30 ? '20' + dateObject.smallYear : '19' + dateObject.smallYear;
         toDateItems.push(year);
       }
     } else if (toFormat[i] === 'DD') {
